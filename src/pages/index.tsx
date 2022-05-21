@@ -1,6 +1,6 @@
-import React from "react";
-import { Hello } from "~/components/Hello";
-import styles from "./Home.module.css";
+import React from 'react';
+import { Hello } from '~/components/Hello';
+import styles from './Home.module.css';
 
 const Home: React.FC = () => {
   return (
