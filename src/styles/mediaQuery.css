@@ -1,0 +1,2 @@
+@custom-media --pc-view (min-width: 1000px);
+@custom-media --sp-view (max-width: 999px);

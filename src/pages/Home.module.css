@@ -1,0 +1,13 @@
+.title {
+  color: blue;
+
+  & + p {
+    color: green;
+  }
+}
+
+@media (--pc-view) {
+  .title {
+    color: red;
+  }
+}
