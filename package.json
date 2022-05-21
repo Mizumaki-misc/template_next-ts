@@ -11,7 +11,14 @@
     "lint:eslint": "eslint './src/**/*.{js,ts,jsx,tsx}'",
     "lint:eslint:write": "npm run lint:eslint -- --fix",
     "format": "prettier --write './src/**/*.{js,ts,jsx,tsx,json}'",
-    "format:dry-run": "prettier --check './src/**/*.{js,ts,jsx,tsx,json}'"
+    "format:dry-run": "prettier --check './src/**/*.{js,ts,jsx,tsx,json}'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "dependencies": {
     "next": "12.1.6",
@@ -29,6 +36,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
+    "lint-staged": "^12.4.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^10.1.7",
     "postcss-preset-env": "^7.6.0",
